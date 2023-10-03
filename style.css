@@ -1,0 +1,1346 @@
+@font-face {
+    font-family: 'Avenue';
+    src: url('font/5thAvenue.ttf') format(truetype);
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Avenue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+div.polygon {
+    background-color: #593520;
+    clip-path: polygon(0 0, 34% 0, 64% 61%, 43% 100%, 0 100%);
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 115vh;
+    box-shadow: inset 0px 1px 15px;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    max-height: 115vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Backgrownd Video */
+
+.banner video {
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Browser */
+
+nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s;
+}
+
+.colunm-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.nav-scrolled {
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+nav ul {
+    float: right;
+    margin-left: auto;
+}
+
+nav li {
+    list-style: none;
+    float: left;
+    margin: 0 30px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #593520;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+
+#logo {
+    margin-left: 3em;
+    width: 100px;
+    transition: all 0.5s;
+}
+
+/* Hamburguer */
+
+.hamburguer {
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+    margin: 25px 25px;
+    background: #FFF;
+}
+
+.hamburguer:hover {
+    background: #59352069;
+}
+
+.hamburguer div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #29180f;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    nav {
+        width: 90%;
+        padding: 0 20px;
+        position: fixed;
+        left: -320px;
+        top: 0;
+        width: 280px;
+        height: 120vh;
+        background-color: #FFF;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    #nav_check:checked ~ nav{
+        left: 0;
+    }
+
+    nav #Icon {
+        display: block;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+
+    nav ul a {
+        font-size: 25px;
+        margin: 10px 10px;
+    }
+
+    .colunm-nav {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .hamburguer {
+        display: block;
+        position: fixed;
+        right: 20px;
+    }
+
+    #about-us .content p {
+        font-size: 18px;
+    }
+
+}
+
+/* Main containt */
+
+.containt img{
+    position: absolute;
+    width: 400px;
+    top: 50px;
+    margin: 40px;
+}
+
+.containt p {
+    font-family: 'lora', serif;
+    font-size: 18px;
+    line-height: 25px;
+    position: absolute;
+    color: #FFF;
+    top: 380px;
+    width: 450px;
+    margin: 20px 50px;
+}
+
+.containt button {
+    position: absolute;
+    background-color: #FFF;
+    top: 85vh;
+    left: 50px;
+    text-decoration: none;
+    font-family: 'Lora';
+    font-size: 20px;
+    font-weight: 900;
+    width: 300px;
+    height: 50px;
+    border: 5px solid #D9C8BF;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+}
+
+.containt button a, .slide button a, #cookers button a {
+    text-decoration: none;
+    color: #29180f;
+}
+
+.containt button:hover {
+    transform: translateY(-10px);
+}
+
+/* Details Location And Rate */
+
+section#details {
+    background-color: #A68A7B;
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.521);
+}
+
+.location, .michelin-star, .rate {
+    width: 400px;
+    text-align: center;
+    color: #29180f;
+    margin: 40px 10px;
+    border-left: 1px solid #021226;
+    border-right: 1px solid #021226;
+}
+
+.location {
+    border-left: none;
+}
+
+.michelin-star {
+    border: none;
+}
+
+.rate {
+    border-right: none;
+}
+
+.michelin-star h2, .rate p {
+    margin: 0;
+}
+
+.michelin-star p {
+    margin: 0;
+    font-family: 'Lora', sans-serif;
+    font-weight: 500;
+}
+
+.location p, .rate p {
+    font-family: 'Lora', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+ 
+.location strong {
+    font-family: 'Avenue', sans-serif;
+}
+
+#details .michelin-star img, .location img, .rate img {
+    width: 40px;
+}
+
+.rate .fa-star, .rate .fa-star-half-alt {
+    color: #29180f;
+}
+
+/* Dishers Section */
+
+#dishers {
+    margin-top: 250px;
+}
+
+#dishers img {
+    z-index: 1;
+    border-radius: 50%;
+    width: 500px;
+    margin: 50px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    align-items: center;
+}
+
+.slide h2 {
+    color: #593520;
+    font-size: 50px;
+    margin: 0 40px 0 0;
+    line-height: 50px;
+}
+
+.slide span, .slide p {
+    font-family: 'Lora', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 50px;
+}
+
+.fa-star, .fa-star-half-alt {
+    color: #593520;
+}
+
+.slide button {
+    background-color: #FFF;
+    text-decoration: none;
+    font-family: 'Lora';
+    font-size: 20px;
+    font-weight: 900;
+    width: 200px;
+    height: 50px;
+    border: 3px solid #593520;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.slide.active {
+    opacity: 1;
+    clip-path: circle(150% at 0 50%);
+    transition: 0.5s;
+}
+
+.slider .navigation {
+    z-index: 0;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider .navigation .btn {
+    background-color: #D9C8BF;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider .navigation .btn.active {
+    background-color: #593520;
+    box-shadow: 0 0 2px;
+}
+
+/* About us section */
+
+#about-us  {
+    background-image: url(images/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg);
+    background-size: cover;
+    position: relative;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#about-us .content {
+    background-color: hsla(21, 25%, 80%, 0.815);
+    text-align: justify;
+    border-radius: 20px;
+    place-items: center;
+    margin: 2em;
+    height: 550px;
+}
+
+#about-us h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #29180f;
+    margin: 0;
+}
+
+#about-us p {
+    margin: 5px 1em;
+    font-family: 'Lora', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* Cooks section */
+
+#cookers {
+    background-color: #A68A7B;
+    color: #29180f;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    font-size: 20px;
+    line-height: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.521);
+}
+
+#cookers .image {
+    margin: 1.5em;
+    width: 660px;
+}
+
+#cookers .content {
+    width: 600px;
+}
+
+#cookers img{
+    width: 150px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#cookers img:hover {
+    transform: translateY(-10px);
+}
+
+#cookers button {
+    background-color: #FFF;
+    text-decoration: none;
+    font-family: 'Lora';
+    font-size: 20px;
+    font-weight: 900;
+    width: 200px;
+    height: 50px;
+    border: 3px solid #593520;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#cookers button:hover {
+    transform: translateY(-10px);
+}
+
+/* Gallery section */
+
+#gallery {
+    width: 100%;
+    display: flex;
+    margin-top: 3em;
+    margin-bottom: 4em;
+}
+
+#gallery .content{
+    background-color: #59352018;
+    border-radius: 20px;
+    margin: 5px 1em;
+    width: 500px;
+    height: 720px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+#gallery .content h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #29180f;
+    margin: 0;
+}
+
+#gallery .content p {
+    font-family: 'Lora', sans-serif;
+    text-align: justify;
+    margin: 10px;
+    font-size: 20px;
+}
+
+#gallery .conten strong {
+    color: #29180f;
+}
+
+#gallery .img-gallery {
+    column-count: 3;
+    width: 750px;
+}
+
+#gallery .img-gallery img {
+    width: 250px;
+    margin: 5px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+#gallery .img-gallery img:hover {
+    transform: translateY(-10px);
+}
+
+#gallery img.wide {
+    width: 500px;
+    height: 148px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Footer section */
+
+footer {
+    background-color: #D9C8BF;
+    border-top: 2px solid #593520;
+    margin: 0;
+}
+
+#footer-main {
+    display: flex;
+}
+
+#footer-main .info {
+    width: 400px;
+}
+
+#footer-main h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #593520;
+}
+
+#footer-main p, .social-media li a p {
+    font-family: 'Lora', sans-serif;
+    font-size: 20px;
+    color: #29180f;
+}
+
+.social-media {
+    margin: 20px;
+}
+
+.social-media ul {
+    padding: 0;
+}
+
+.social-media li {
+    display: block;
+    font-size: 30px;
+    list-style: none;
+}
+
+.social-media li a {
+    display: flex;
+    text-decoration: none;
+    color: #593520;
+    place-items: center;
+}
+
+.social-media li a p {
+    margin-left: 10px;
+}
+
+h4{
+    text-align: center;
+    margin: 0;
+    color: #593520;
+}
+
+/* 
+
+Reserve page 
+
+*/
+
+#reserve {
+    margin-top: 0;
+    height: 1000px;
+    background-image: url(images/callum-shaw-Vrztewqmi4Q-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#reserve h2 {
+    font-size: 40px;
+}
+
+#reserve .content {
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;
+    height: 250px;
+}
+
+#reserve .content h3 {
+    font-size: 30px;
+    color: #593520;
+    margin: 0;
+}
+
+#reserve .form-row select {
+    width: 200px;
+    height: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #593520;
+    font-family: 'Lora', sans-serif;
+    border: 1px solid #29180f;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+
+#reserve .form-row input {
+    width: 192px;
+    height: 34px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #593520;
+    font-family: 'Lora', sans-serif;
+    border: 1px solid #29180f;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+
+#reserve .form-row input#submit {
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+}
+
+nav li a{
+    color: #593520;
+}
+
+/* 
+
+Menu Page 
+
+*/
+
+#menu {
+    margin: 150px 20px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
+    grid-gap: 20px 40px;
+}
+
+#menu img {
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+
+.food-itens {
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    width: 400px;
+    background-color: #D9C8BF;
+    box-shadow: 0 0 15px ;
+    margin-bottom: 10px;
+}
+
+#menu .content {
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+
+#menu .content p {
+    margin: 0;
+}
+
+#menu .title-price {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+#menu .title-price h2 {
+    margin: 0;
+}
+
+#menu .title-price span {
+    text-align: right;
+    margin-left: auto;
+}
+
+#menu .stars {
+    margin: auto;
+}
+
+/* 
+
+Chefs page 
+
+*/
+
+#manutention {
+    display: grid;
+    place-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    div.polygon {
+        width: 700px;
+        height: 101vh;
+    }
+
+    .containt img {
+        width: 300px;
+        top: 30px;
+    }
+
+    .containt p {
+        width: 350px;
+        top: 300px;
+    }
+
+    .containt button {
+        width: 250px;
+    }
+
+    /* Slide section */
+
+    #dishers img {
+        width: 400px;
+    }
+
+    /* About us section */
+
+    #about-us h1{
+        font-size: 35px;
+    }
+
+    #about-us p {
+        font-size: 19px;
+    }
+
+    /* cookers section */
+
+    #cookers img {
+        width: 130px;
+    }
+
+    #cookers .content {
+        width: 350px;
+    }
+
+    /* Gallery section */
+
+    #gallery .content {
+        width: 475px;
+        height: fit-content;
+        margin: 0px;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    #gallery .content h2 {
+        text-align: left;
+        margin: 10px;
+    }
+
+    #gallery .content p {
+        font-size: 16px;
+    }
+
+    #gallery .img-gallery {
+        width: 520px;
+        align-items: flex-start;
+    }
+
+    #gallery .img-gallery img {
+        width: 175px;
+    }
+
+    #gallery .img-gallery img.wide {
+        width: 355px;
+        height: 102.67px;
+    }
+
+    /* Footer section */
+
+    footer img {
+        width: 300px;
+        margin: 15px;
+    }
+
+    .social-media {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    
+    div.polygon {
+        width: 500px;
+        height: 550px;
+    }
+
+    .containt img {
+        width: 200px;
+        top: 15px;
+    }
+
+    .containt p {
+        font-size: 15px;
+        width: 240px;
+        top: 200px;
+        left: 25px;
+        margin: 10px;
+    }
+
+    .containt button {
+        width: 190px;
+        height: 40px;
+        top: 360px;
+        left: 25px;
+        border: 2px solid #A68A7B;
+    }
+
+    .containt button a {
+        font-size: 15px;
+    }
+
+    /* Details section */
+
+    #details .michelin-star img, .location img, .rate img {
+        width: 30px;
+    }
+
+    #details p {
+        font-size: 15px;
+    }
+
+    /* Dishers section */
+
+    #dishers {
+        height: 1050px;
+    }
+
+    #dishers .content {
+        text-align: center;
+    }
+
+    #dishers .content h2 {
+        margin: 0;
+    }
+
+    #dishers .content span {
+       display: none;
+    }
+
+    .slider {
+        height: 1050px;
+    }
+
+    .slide {
+        flex-direction: column;
+    }
+
+    #dishers img {
+        width: 500px;
+    }
+
+    /* About us section */
+
+    #about-us {
+        height: 900px;
+    }
+
+    #about-us .content {
+        height: fit-content;
+    }
+
+    /* Cooks section */
+
+    #cookers {
+        height: 350px;
+    }
+
+    #cookers .content {
+        width: 500px;
+    }
+
+    #cookers img {
+        width: 150px;
+    }
+
+    /* Gallery section */
+
+    #gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gallery .content {
+        width: 650px;
+        border-radius: 20px;
+    }
+
+    #gallery .content h2 {
+        text-align: center;
+    }
+
+    #gallery .img-gallery {
+        margin: 20px;
+        width: 650px;
+    }
+
+    #gallery .img-gallery img {
+        width: 200px;
+    }
+
+    #gallery .img-gallery img.wide {
+        width: 425px;
+        height: 117.34px;
+    }
+
+    /* Footer section */
+
+    Footer img {
+        width: 200px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    div.polygon {
+        height: 450px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    label.hamburguer {
+        margin: 10px 0;
+    }
+    
+    .banner video {
+        height: 1000px;
+    }
+
+    div.polygon {
+        display: none;
+    }
+
+    .containt img {
+        width: 300px;
+        margin: 15%;
+    }
+
+    .containt p {
+        text-align: center;
+        top: 300px;
+        left: 0;
+        width: 300px;
+        margin: 15%;
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .containt button {
+        top: 500px;
+        width: 300px;
+        height: 50px;
+        left: 0;
+        margin: 15%;
+    }
+
+    .containt button a {
+        font-size: 20px;
+    }
+
+    /* Details section */
+
+    section#details {
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .location, .michelin-star, .rate {
+        margin: auto;
+    }
+
+    #details .michelin-star img, .location img, .rate img {
+        width: 50px;
+    }
+
+    .location {
+        border: none;
+    }
+
+    .michelin-star {
+        border-top: 1px solid #021226;
+        border-bottom: 1px solid #021226;
+    }
+
+    .michelin-star img {
+        margin-top: 30px;
+    }
+    
+    .michelin-star p {
+        margin-bottom: 30px;
+    }
+
+    .rate {
+        border: none;
+    }
+
+
+    /* Dishers section */
+
+    #dishers {
+        margin-top: 600px;
+        height: fit-content;
+    }
+
+    #dishers img {
+        width: 300px;
+    }
+
+    .slider {
+        height: 920px;
+    }
+
+    .slide h2 {
+        font-size: 30px;
+    }
+
+    .slide p {
+        margin: 20px 15px;
+    }
+
+    /* About us section */
+
+    #about-us {
+        height: 1300px;
+    }
+
+    /* Cookers section */
+
+    #cookers {
+        flex-direction: column-reverse;
+        justify-content: start;
+        height: 1060px;
+        width: 100%;
+    }
+
+    #cookers .content {
+        width: 100%;
+    }
+
+    #cookers h2 {
+        text-align: center;
+        margin: 20px 10px;
+    }
+
+    #cookers button {
+        margin: 0 25% ;
+
+    }
+
+    #cookers .image {
+        place-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 425px;
+        margin: 1em 0;
+    }
+
+    #cookers .image img {
+        margin: 0.5em 0;
+        width: 200px;
+    }
+
+    /* Gallery section */
+
+    #gallery {
+        width: 100%;
+    }
+
+    #gallery .content {
+        width: 100%;
+        height: 600px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    #gallery .img-gallery {
+        align-items: left;
+        width: 400px;
+        column-count: 2;
+        margin: 15px 0; 
+    }
+
+    #gallery .img-gallery img {
+        margin: 0;
+    }
+
+    #gallery .img-gallery img.wide {
+        width: 200px;
+    }
+
+    /* Footer section */
+
+    #footer-main {
+        flex-direction: column;
+    }
+
+    #footer-main img {
+        margin: 0 14%;
+        width: 300px;
+    }
+
+    #footer-main .info, #footer-main .social-media {
+        margin: 15px;
+    }
+
+    /* 
+    
+    Reserve Page 
+    
+    */
+
+    #reserve .content {
+        width: 100%;
+    }
+
+    #reserve .form-row select {
+        width: 300px;
+    }
+
+    #reserve .form-row input {
+        width: 294px;
+    }
+
+    #reserve .form-row input#submit {
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    
+    .containt img {
+        margin: 10%;
+    }
+
+    .containt p {
+        margin: 10%;
+    }
+
+    .containt button {
+        margin: 10%;
+    }
+
+    /* Details section */
+
+    .michelin-star, .location, .rate {
+        width: 100%;
+    }
+
+    /* Dishers section */
+
+    #dishers img {
+        margin: 35.5px;
+    }
+
+    /* About us section */
+
+    #about-us {
+        height: 1300px;
+    }
+
+    #about-us .content {
+        width: 350px;
+    }
+
+    #about-us p {
+        width: 340px;
+        margin: 5px;
+    }
+
+    /* Cookers section */
+
+    #cookers .image {
+        width: 100%;
+    }
+
+    #cookers button {
+        margin: 0 90px;
+    }
+
+    /* Gallery section */
+
+    #gallery .content {
+        height: 670px;
+    }
+
+    #gallery .img-gallery {
+        width: 100%;
+    }
+
+    #gallery .img-gallery img {
+        width: 175px;
+    }
+
+    #gallery .img-gallery img.wide {
+        width: 175px;
+    }
+
+    /* Footer section  */
+
+    #footer-main img {
+        margin: 35.5px;
+    }
+
+    #footer-main .info {
+        width: 90%;
+    }
+
+    /* 
+    
+    Reserve Page 
+    
+    */
+
+    #reserve h2 {
+        margin: 0 10px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    
+    .containt img {
+        margin: 5%;
+    }
+
+    .containt p {
+        margin: 5%;
+    }
+
+    .containt button {
+        margin: 5%;
+    }
+
+    /* Dishers section */
+
+    #dishers img {
+        width: 290px;
+        margin: 5%;
+    }
+
+    /* About us section */
+
+    #about-us {
+        height: 1450px;
+    }
+
+    #about-us .content {
+        width: 300px;
+    }
+
+    #about-us p {
+        width: 290px;
+    }
+
+    /* Cookers section */
+
+    #cookers {
+        height: 1100px;
+    }
+
+    #cookers button {
+        margin: 0 60px;
+    }
+
+    /* Gallery section */
+
+    #gallery .content {
+        height: 750px;
+    }
+
+    #gallery .img-gallery {
+        column-count: 1;
+    }
+
+    #gallery .img-gallery img, #gallery .img-gallery img.wide {
+        width: 300px;
+        margin: 0 3%;
+    }
+
+    /* Footer section */
+
+    #footer-main img {
+        width: 250px;
+    }
+
+    /* 
+    
+    Reserve Page 
+    
+    */
+
+    #reserve .form-row select {
+        width: 290px;
+    }
+
+    #reserve .form-row input {
+        width: 284px;
+    }
+
+    #reserve .form-row input#submit {
+        width: 290px;
+    }
+
+}

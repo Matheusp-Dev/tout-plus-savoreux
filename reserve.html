@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tout Plus Savoureux</title>
+    <!-- Links -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7f2ddf0c96.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <input type="checkbox" id="nav_check" hidden>
+            <nav class="browser"> <!-- Nav -->
+                <div class="colunm-nav">
+                    <div id="Icon">
+                        <a href="index.html">
+                            <img id="logo" src="images/logo_Tout-removebg-preview.png">
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a id="a1" href="index.html#">Home</a>
+                            <li><a id="a2" href="reserve.html">Reserve</a></li>
+                            <li><a id="a3" href="menu.html">Menu</a></li>
+                            <li><a id="a4" href="#about-us">About Us</a></li>
+                            <li><a id="a5" href="#gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <label for="nav_check" class="hamburguer">
+                    <div id="div1"></div>
+                    <div id="div2"></div>
+                    <div id="div3"></div>
+                </label>
+            </nav>
+            <main>
+                <section id="reserve">
+                    <h2>Book your table now</h2>
+                    <div class="content">
+                        <div class="card">
+                            <h3>Reservation</h3>
+                            <form>
+                                <div class="form-row">
+                                    <select name="days">
+                                        <option value="day-select">Select Day</option>
+                                        <option value="sunday">Sunday</option>
+                                        <option value="monday">Monday</option>
+                                        <option value="tuesday">Tuesday</option>
+                                        <option value="wednesday">Wednesday</option>
+                                        <option value="thursday">Thursday</option>
+                                        <option value="saturday">Saturday</option>
+                                    </select>
+                                    <select name="hour select">
+                                        <option value="Selct hour">Select Hour</option>
+                                        <option value="10">10:00</option>
+                                        <option value="11">11:00</option>
+                                        <option value="12">12:00</option>
+                                        <option value="13">13:00</option>
+                                        <option value="14">14:00</option>
+                                        <option value="15">15:00</option>
+                                        <option value="16">16:00</option>
+                                        <option value="17">17:00</option>
+                                        <option value="18">18:00</option>
+                                        <option value="19">19:00</option>
+                                        <option value="20">20:00</option>
+                                        <option value="21">21:00</option>
+                                        <option value="22">22:00</option>
+                                        <option value="23">23:00</option>
+                                    </select>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="text" placeholder="Full Name">
+                                        <input type="text" placeholder="Phone Number">
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="number" placeholder="How many Persons?" min="1">
+                                        <input type="submit" onclick="showAlert()" id="submit" value="Book Table">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </header>
+        <footer>
+            <div id="footer-main">
+                <div class="footer-img">
+                    <img src="images/logo_Tout-removebg-preview.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Open days</h3>
+                    <p>We are open from Tuesday to Sunday to offer you an exceptional gastronomic experience.</p>
+                    <h3>Open hours</h3>
+                    <p>Our opening hours are from 10:00 AM to 11:00 PM on weekdays and from 12:00 PM to 11:00 PM on weekends.</p>
+                </div>
+                <div class="social-media">
+                    <h3>Find us in our social media</h3>
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i><p>Intagram</p></a></li>
+                        <li><a href=""><i class="fa-brands fa-tiktok"></i><p>Tik Tok</p></a></li>
+                        <li><a href=""><i class="fa-brands fa-whatsapp"></i><p>Whatsapp</p></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i><p>Facebook</p></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="creator">
+                <h4>Matheus Pereira - 2023</h4>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

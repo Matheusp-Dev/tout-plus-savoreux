@@ -1,0 +1,24 @@
+@font-face {
+    font-family: '5th Avenue';
+    src: url('5thAvenue.eot');
+    src: local('5th Avenue'), local('5thAvenue'),
+        url('5thAvenue.eot?#iefix') format('embedded-opentype'),
+        url('5thAvenue.woff2') format('woff2'),
+        url('5thAvenue.woff') format('woff'),
+        url('5thAvenue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '5th Avenue';
+    src: url('5thAvenue-Italic.eot');
+    src: local('5th Avenue Italic'), local('5thAvenue-Italic'),
+        url('5thAvenue-Italic.eot?#iefix') format('embedded-opentype'),
+        url('5thAvenue-Italic.woff2') format('woff2'),
+        url('5thAvenue-Italic.woff') format('woff'),
+        url('5thAvenue-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
