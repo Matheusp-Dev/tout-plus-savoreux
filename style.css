@@ -44,6 +44,7 @@ div.polygon {
     left: 0;
     object-fit: cover;
     width: 100%;
+    height: auto;
 }
 
 /* Browser */
@@ -91,7 +92,7 @@ nav li a {
 
 
 #logo {
-    margin-left: 3em;
+    margin-left: 4em;
     width: 100px;
     transition: all 0.5s;
 }
@@ -167,11 +168,7 @@ nav li a {
     .hamburguer {
         display: block;
         position: fixed;
-        right: 20px;
-    }
-
-    #about-us .content p {
-        font-size: 18px;
+        left: 0.5em;
     }
 
 }
@@ -180,14 +177,14 @@ nav li a {
 
 .containt img{
     position: absolute;
-    width: 400px;
-    top: 50px;
+    width: 24em;
+    top: 2.5em;
     margin: 40px;
 }
 
 .containt p {
     font-family: 'lora', serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
     position: absolute;
     color: #FFF;
@@ -199,7 +196,7 @@ nav li a {
 .containt button {
     position: absolute;
     background-color: #FFF;
-    top: 85vh;
+    top: 27em;
     left: 50px;
     text-decoration: none;
     font-family: 'Lora';
@@ -382,34 +379,35 @@ section#details {
     background-image: url(images/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg);
     background-size: cover;
     position: relative;
-    height: 1000px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: right;
+    align-items: left;
+    height: 46em;
 }
 
 #about-us .content {
     background-color: hsla(21, 25%, 80%, 0.815);
+    width: 32em;
     text-align: justify;
     border-radius: 20px;
     place-items: center;
-    margin: 2em;
-    height: 550px;
+    margin: 3em 5em;
+    height: 38em;
 }
 
 #about-us h1 {
     text-align: center;
     font-size: 50px;
     color: #29180f;
-    margin: 0;
+    margin: 0 0 0.3em 0;
 }
 
 #about-us p {
-    margin: 5px 1em;
+    margin: 10px 3em;
     font-family: 'Lora', sans-serif;
     font-weight: 500;
     font-size: 20px;
+    text-align: justify;
 }
 
 /* Cooks section */
@@ -418,7 +416,7 @@ section#details {
     background-color: #A68A7B;
     color: #29180f;
     width: 100%;
-    height: 220px;
+    height: fit-content;
     display: flex;
     font-size: 20px;
     line-height: 30px;
@@ -426,18 +424,18 @@ section#details {
 }
 
 #cookers .image {
-    margin: 1.5em;
-    width: 660px;
+    margin: 1.8em;
+    width: 40em;
 }
-
+/* 
 #cookers .content {
-    width: 600px;
-}
+    width: auto;
+} */
 
 #cookers img{
-    width: 150px;
+    width: 8em;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 15px;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -469,17 +467,18 @@ section#details {
 
 #gallery {
     width: 100%;
-    display: flex;
     margin-top: 3em;
     margin-bottom: 4em;
+    gap: 2em;
+    justify-content: center;
 }
 
 #gallery .content{
     background-color: #59352018;
     border-radius: 20px;
-    margin: 5px 1em;
-    width: 500px;
-    height: 720px;
+    margin: 3em auto;
+    width: 90%;
+    height: fit-content;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
@@ -493,21 +492,18 @@ section#details {
 #gallery .content p {
     font-family: 'Lora', sans-serif;
     text-align: justify;
-    margin: 10px;
+    margin: 10px 2em;
     font-size: 20px;
-}
-
-#gallery .conten strong {
-    color: #29180f;
 }
 
 #gallery .img-gallery {
     column-count: 3;
-    width: 750px;
+    width: 60em;
+    margin: auto;
 }
 
 #gallery .img-gallery img {
-    width: 250px;
+    width: 19em;
     margin: 5px;
     transition: 0.5s;
     border-radius: 5px;
@@ -518,8 +514,8 @@ section#details {
 }
 
 #gallery img.wide {
-    width: 500px;
-    height: 148px;
+    width: 39.5em;
+    height: 11.2em;
     object-fit: cover;
     object-position: center;
 }
@@ -534,6 +530,7 @@ footer {
 
 #footer-main {
     display: flex;
+    justify-content: space-around;
 }
 
 #footer-main .info {
@@ -724,6 +721,7 @@ Chefs page
     place-items: center;
 }
 
+
 @media screen and (max-width: 1024px) {
     
     div.polygon {
@@ -743,6 +741,7 @@ Chefs page
 
     .containt button {
         width: 250px;
+        top: 22em;
     }
 
     /* Slide section */
@@ -763,25 +762,45 @@ Chefs page
 
     /* cookers section */
 
+    #cookers {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #cookers .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+    }
+
     #cookers img {
-        width: 130px;
+        width: 9em;
+        margin-top: 20px
     }
 
     #cookers .content {
-        width: 350px;
+        display: flex;
+       align-items: center;
+       flex-direction: column;
+       justify-content: center;
+    }
+
+    #cookers .content button {
+        margin-bottom: 1em;
     }
 
     /* Gallery section */
 
     #gallery .content {
-        width: 475px;
         height: fit-content;
-        margin: 0px;
-        border-radius: 0px 10px 10px 0px;
+        justify-content: center;
+        border-radius: 10px;
     }
 
     #gallery .content h2 {
-        text-align: left;
         margin: 10px;
     }
 
@@ -956,12 +975,90 @@ Chefs page
         height: 450px;
     }
 
+    #dishers .content p {
+        margin: 2em;
+    }
+
+    #about-us {
+        justify-content: center;
+        height: fit-content;
+    }
+
+    #about-us h1 {
+        font-size: 50px;
+    }
+
+    #cookers {
+        height: fit-content;
+    }
+
+    #cookers .image {
+        margin-top: 1em;
+    }
+
+    #cookers .content {
+        text-align: center;
+    }
+
+    #gallery .img-gallery {
+        margin: auto;
+    }
+
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
+
+    div.polygon {
+        display: none;
+    }
+
+    .containt img {
+        width: 12em;
+        top: 2em;
+        margin: 0 40px;
+    }
+
+    .containt p {
+        top: 8em;
+        display: none;
+    }
+
+    .containt button {
+        top: 10em;
+        left: 2em;
+    }
+
+    #cookers img {
+        width: 6.5em;
+    }
+
+    #gallery .content {
+        width: 90%;
+    }
+
+    #gallery .img-gallery {
+        width: 30em;
+    }
+
+    #gallery .img-gallery img {
+        width: 10em;
+    }
+
+    #gallery .img-gallery img.wide {
+        width: 20.5em;
+        height: 5.9em;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
 
     label.hamburguer {
         margin: 10px 0;
+    }
+
+    .slider .navigation {
+        bottom: 20px;
     }
     
     .banner video {
@@ -972,27 +1069,38 @@ Chefs page
         display: none;
     }
 
+    .containt {
+        display: grid;
+        place-items: center;
+    }
+
     .containt img {
-        width: 300px;
-        margin: 15%;
+        width: 20em;
+        margin: auto;
     }
 
     .containt p {
+        display: block;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
-        top: 300px;
-        left: 0;
-        width: 300px;
-        margin: 15%;
+        margin: 0;
+        max-width: 15em;
+        width: 100%;
         font-size: 25px;
         line-height: 25px;
     }
 
     .containt button {
         top: 500px;
-        width: 300px;
+        max-width: 15em;
+        width: 100%;
         height: 50px;
-        left: 0;
-        margin: 15%;
+        left: 50%;
+        margin: 0;
+        transform: translateX(-50%);
     }
 
     .containt button a {
@@ -1016,11 +1124,13 @@ Chefs page
 
     .location {
         border: none;
+        width: 100%;
     }
 
     .michelin-star {
         border-top: 1px solid #021226;
         border-bottom: 1px solid #021226;
+        width: 100%;
     }
 
     .michelin-star img {
@@ -1033,6 +1143,7 @@ Chefs page
 
     .rate {
         border: none;
+        width: 100%;
     }
 
 
@@ -1044,7 +1155,8 @@ Chefs page
     }
 
     #dishers img {
-        width: 300px;
+        width: 18em;
+        margin: 2em 0;
     }
 
     .slider {
@@ -1061,16 +1173,20 @@ Chefs page
 
     /* About us section */
 
-    #about-us {
-        height: 1300px;
+    #about-us .content {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 2em;
+        border-radius: 0;
     }
+
 
     /* Cookers section */
 
     #cookers {
         flex-direction: column-reverse;
         justify-content: start;
-        height: 1060px;
+        height: fit-content;
         width: 100%;
     }
 
@@ -1092,7 +1208,7 @@ Chefs page
         place-items: center;
         display: flex;
         flex-direction: column;
-        width: 425px;
+        width: 10em;
         margin: 1em 0;
     }
 
@@ -1109,23 +1225,23 @@ Chefs page
 
     #gallery .content {
         width: 100%;
-        height: 600px;
         border-radius: 20px 20px 0 0;
     }
 
     #gallery .img-gallery {
-        align-items: left;
-        width: 400px;
+        width: 95%;
         column-count: 2;
-        margin: 15px 0; 
+        justify-content: center;
     }
 
     #gallery .img-gallery img {
+        width: 95%;
         margin: 0;
     }
 
     #gallery .img-gallery img.wide {
-        width: 200px;
+        width: 95%;
+        height: 10em;
     }
 
     /* Footer section */
@@ -1134,9 +1250,23 @@ Chefs page
         flex-direction: column;
     }
 
+    #footer-main .footer-img {
+        display: grid;
+        place-items: center;
+    }
+
     #footer-main img {
-        margin: 0 14%;
-        width: 300px;
+        width: 18em;
+    }
+
+    #footer-main .footer-img img {
+        width: 18em;
+        margin: 1em;
+    }
+
+    #footer-main .info {
+        width: 95%;
+        margin: 0 0 0 1em;
     }
 
     #footer-main .info, #footer-main .social-media {
@@ -1168,18 +1298,6 @@ Chefs page
 }
 
 @media screen and (max-width: 375px) {
-    
-    .containt img {
-        margin: 10%;
-    }
-
-    .containt p {
-        margin: 10%;
-    }
-
-    .containt button {
-        margin: 10%;
-    }
 
     /* Details section */
 
@@ -1195,17 +1313,8 @@ Chefs page
 
     /* About us section */
 
-    #about-us {
-        height: 1300px;
-    }
-
-    #about-us .content {
-        width: 350px;
-    }
-
     #about-us p {
-        width: 340px;
-        margin: 5px;
+        margin: 1.5em;
     }
 
     /* Cookers section */
@@ -1220,9 +1329,6 @@ Chefs page
 
     /* Gallery section */
 
-    #gallery .content {
-        height: 670px;
-    }
 
     #gallery .img-gallery {
         width: 100%;
@@ -1238,13 +1344,9 @@ Chefs page
 
     /* Footer section  */
 
-    #footer-main img {
-        margin: 35.5px;
-    }
+    
 
-    #footer-main .info {
-        width: 90%;
-    }
+    
 
     /* 
     
@@ -1260,45 +1362,26 @@ Chefs page
 }
 
 @media screen and (max-width: 320px) {
-    
-    .containt img {
-        margin: 5%;
-    }
 
     .containt p {
-        margin: 5%;
-    }
-
-    .containt button {
-        margin: 5%;
+        font-size: 18px;
     }
 
     /* Dishers section */
 
     #dishers img {
-        width: 290px;
+        width: 15em;
         margin: 5%;
     }
 
     /* About us section */
 
-    #about-us {
-        height: 1450px;
-    }
-
-    #about-us .content {
-        width: 300px;
-    }
-
     #about-us p {
-        width: 290px;
+        font-size: 16px;
     }
 
     /* Cookers section */
 
-    #cookers {
-        height: 1100px;
-    }
 
     #cookers button {
         margin: 0 60px;
@@ -1306,9 +1389,6 @@ Chefs page
 
     /* Gallery section */
 
-    #gallery .content {
-        height: 750px;
-    }
 
     #gallery .img-gallery {
         column-count: 1;
