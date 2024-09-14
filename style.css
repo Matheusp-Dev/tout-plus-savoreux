@@ -655,11 +655,23 @@ Menu Page
 
 */
 
+#menu-page {
+    background-color: #A68A7B;
+}
+
+#menu-page .text {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 5em;
+}
+
+
 #menu {
-    margin: 150px 20px;
+    margin: 1em auto 3em auto;
     padding: 0;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
+    place-items: center;
     grid-gap: 20px 40px;
 }
 
@@ -674,7 +686,8 @@ Menu Page
     position: relative;
     grid-template-rows: auto 1fr;
     border-radius: 15px;
-    width: 400px;
+    width: 26em;
+    height: 46em;
     background-color: #D9C8BF;
     box-shadow: 0 0 15px ;
     margin-bottom: 10px;
@@ -716,9 +729,46 @@ Chefs page
 
 */
 
-#manutention {
-    display: grid;
-    place-items: center;
+#chefs-page {
+    background-color: #D9C8BF;
+}
+
+.Chefs {
+    display: flex;
+    margin: 4em;
+}
+
+.Chefs .content {
+    margin: 3em;
+}
+
+.Chefs .content h1 {
+    color: #29180f;
+}
+
+.Chefs .content p {
+    font-family: 'Lora', sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.Chefs img {
+    width: 30em;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.Chefs img:hover {
+    transform: translateY(-10px);
+}
+
+.Chefs.one {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.Chefs.one.first {
+    margin-top: 7em;
 }
 
 
@@ -831,6 +881,20 @@ Chefs page
 
     .social-media {
         margin: 0;
+    }
+
+    /* 
+
+    Chefs page 
+
+    */
+
+    .Chefs img {
+        width: 25em;
+    }
+
+    .Chefs .content {
+        margin: 1em;
     }
 
 }
@@ -967,6 +1031,36 @@ Chefs page
         width: 200px;
     }
 
+    /*
+    
+    Menu Page
+    
+    */
+
+    .food-itens {
+        width: 20em;
+    }
+
+    /* 
+
+    Chefs page 
+
+    */
+
+    .Chefs {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Chefs.one {
+        flex-direction: column;
+    }
+
+    .Chefs .content {
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -1101,6 +1195,10 @@ Chefs page
         left: 50%;
         margin: 0;
         transform: translateX(-50%);
+    }
+
+    .containt button:hover {
+        transform: none;
     }
 
     .containt button a {
@@ -1293,6 +1391,44 @@ Chefs page
 
     #reserve .form-row input#submit {
         width: 300px;
+    }
+
+    /*
+    
+    Menu Page
+    
+    */
+
+    .food-itens {
+        width: 100%;
+        height: fit-content;
+        border-radius: 0;
+    }
+
+    #menu img {
+        border-radius: 0;
+    }
+
+    /* 
+
+    Chefs page 
+
+    */
+
+    .Chefs img {
+        width: 15em;
+    }
+
+    .Chefs .content {
+        margin: 0;
+    }
+
+    .Chefs .content h1 {
+        font-size: 30px;
+    }
+
+    .Chefs .content p {
+        font-size: 1em;
     }
 
 }
