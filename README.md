@@ -11,12 +11,12 @@
 
 <p>
   This is my first project using HTML, CSS, and JavaScript. During my studies, I developed an interest in fullstack development and decided to focus initially on the frontend. Based on what I've learned so far, I created this project to demonstrate my knowledge. I recognize that there's still much to improve, but I'm very proud to have completed this step and excited to keep enhancing my skills.
-  In this project, I worked primarily with HTML and CSS, and it includes:
-    - 4 pages
-    - Responsiveness
-    - Form
-    - Image slider
-    - Custom design
+  In this project, I worked primarily with HTML and CSS, and it includes: <br>
+    - 4 pages <br>
+    - Responsiveness <br>
+    - Form <br>
+    - Image slider <br>
+    - Custom design <br>
 
   I hope you like it!
 </p>
